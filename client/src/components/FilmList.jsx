@@ -12,7 +12,6 @@ function FilmList() {
       try {
         // Récupération des données des films
         const filmsData = await getFilms();
-        console.log('Films data:', filmsData); // Ajoutez cette ligne pour vérifier les données
         // Mise à jour de l'état films avec les données récupérées
         setFilms(filmsData);
       } catch (error) {
@@ -33,7 +32,7 @@ function FilmList() {
   // affichage (render)
   return (
     <>
-        <h1>Films {films.length}</h1>
+      <h1>Films {films.length}</h1>
     </>
   );
 }
