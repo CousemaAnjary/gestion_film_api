@@ -1,3 +1,7 @@
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Film from "./pages/Film";
+
 function App() {
   // state (état, données) de l'application
 
@@ -6,7 +10,10 @@ function App() {
   // affichage (render)
   return (
     <>
-      <h1>Hello World</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/film" element={<Film />} />
+      </Routes>
     </>
   );
 }
