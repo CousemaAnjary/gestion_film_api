@@ -22,17 +22,32 @@ function FilmList() {
         setLoading(false);
       }
     };
-    fetchData();
+    fetchData(); // appel de la fonction pour récupérer les données
   }, []);
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+  const MoviesRender = () => {
+    return loading ? (
+      <div>chargement...</div>
+    ) : (
+      <div>
+        {films.map((film) => {
+          return (
+            <div key={film.id}>
+              <h2>{film.title}</h2>
+              <img src={film.image} />
+              <p>{film.description}</p>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
 
   // affichage (render)
   return (
     <>
       <h1>Films {films.length}</h1>
+      <div>{MoviesRender()}</div>
     </>
   );
 }
