@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-Route::get('films',[FilmController::class,'index']);
+Route::get('/films',[FilmController::class,'index']);
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

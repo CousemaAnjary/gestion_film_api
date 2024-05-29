@@ -4,7 +4,7 @@ import api from "./apiConfig";
 export const getFilms = async () => {
   try {
     const response = await api.get("/films");
-    return response.data;
+    return response.data.films;
 
   } catch (error) {
     console.error("Error fetching films:", error);

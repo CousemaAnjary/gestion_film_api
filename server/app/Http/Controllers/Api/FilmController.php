@@ -15,9 +15,9 @@ class FilmController extends Controller
 
         // Retourner la liste des films
         return response()->json([
-            "films"=> $films,
-            "status"=> 200,
-            "message"=> "Liste des films récupérée avec succès"
+            "films" => $films,
+            "message" => "Liste des films récupérée avec succès",
+            "status" => 200
         ]);
     }
 }
