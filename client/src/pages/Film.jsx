@@ -13,6 +13,6 @@ function Film() {
       <h1>La page film</h1>
       <FilmList />
     </>
-  );
+  )
 }
 export default Film
