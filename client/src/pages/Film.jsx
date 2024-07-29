@@ -1,4 +1,4 @@
-import FilmList from "../components/FilmList";
+import FilmList from "../components/FilmList"
 
 function Film() {
   // state (état, données) de l'application
